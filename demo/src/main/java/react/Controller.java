@@ -1,0 +1,102 @@
+package react;
+
+import java.util.Map;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import java.util.List;
+
+@RestController
+public class Controller {
+    @GetMapping("/products")
+    public Map<String, Object> products() {
+        return Map.of(
+                "products", List.of(
+                        Map.of(
+                                "id", 1,
+                                "name", "Gaming PC Alpha",
+                                "price", 899.99,
+                                "category", "Gaming PC",
+                                "specs", Map.of(
+                                        "cpu", "Intel i5-12400F",
+                                        "gpu", "NVIDIA GTX 1660 Super",
+                                        "ram", "16GB DDR4",
+                                        "storage", "512GB SSD"
+                                ),
+                                "stock", 12,
+                                "image", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ9ec74j6Alt2x8EcTeG-kLa127Mh8RyJfww&s"
+                        ),
+                        Map.of(
+                                "id", 2,
+                                "name", "Workstation Pro X",
+                                "price", 1299.00,
+                                "category", "Workstation",
+                                "specs", Map.of(
+                                        "cpu", "Intel i7-12700K",
+                                        "gpu", "NVIDIA RTX 3060",
+                                        "ram", "32GB DDR4",
+                                        "storage", "1TB SSD"
+                                ),
+                                "stock", 5,
+                                "image", "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/franchise/precision/precision-fixed-imagery/compact-design/precision-fixed-franchise-mod3-expanded-1920x1440.png?fmt=png-alpha&wid=1920&hei=1440"
+                        ),
+                        Map.of(
+                                "id", 3,
+                                "name", "Budget Office PC",
+                                "price", 499.99,
+                                "category", "Office PC",
+                                "specs", Map.of(
+                                        "cpu", "AMD Ryzen 3 4100",
+                                        "gpu", "Integrated Radeon",
+                                        "ram", "8GB DDR4",
+                                        "storage", "256GB SSD"
+                                ),
+                                "stock", 20,
+                                "image", "https://cdn.mos.cms.futurecdn.net/d3F849bwjrLJJ7XNwa6VJ7.png"
+                        ),
+                        Map.of(
+                                "id", 4,
+                                "name", "Gaming PC Ultra",
+                                "price", 1599.00,
+                                "category", "Gaming PC",
+                                "specs", Map.of(
+                                        "cpu", "AMD Ryzen 7 5800X",
+                                        "gpu", "NVIDIA RTX 4070",
+                                        "ram", "32GB DDR4",
+                                        "storage", "1TB NVMe SSD"
+                                ),
+                                "stock", 7,
+                                "image", "https://breunor.com/cdn/shop/files/rossa_7b01eaf6-eb4f-45b2-9437-c00d4b4dc97d.jpg?v=1757060005&width=1024"
+                        ),
+                        Map.of(
+                                "id", 5,
+                                "name", "Creator Studio PC",
+                                "price", 1899.99,
+                                "category", "Creator / Editing",
+                                "specs", Map.of(
+                                        "cpu", "Intel i9-12900K",
+                                        "gpu", "NVIDIA RTX 3080",
+                                        "ram", "32GB DDR5",
+                                        "storage", "2TB SSD"
+                                ),
+                                "stock", 3,
+                                "image", "https://velocitymicro.com/img/category-thumbnails/SX3-category-thumbnail.png"
+                        ),
+                        Map.of(
+                                "id", 6,
+                                "name", "Home PC Mini",
+                                "price", 349.00,
+                                "category", "Home PC",
+                                "specs", Map.of(
+                                        "cpu", "Intel i3-10100",
+                                        "gpu", "Integrated UHD",
+                                        "ram", "8GB DDR4",
+                                        "storage", "256GB SSD"
+                                ),
+                                "stock", 15,
+                                "image", "https://m.media-amazon.com/images/I/616+jU7dPJL._AC_UF894,1000_QL80_.jpg"
+                        )
+                )
+        );
+
+    }
+}
