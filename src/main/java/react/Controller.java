@@ -1,10 +1,13 @@
 package react;
 
 import java.util.Map;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class Controller {
     @GetMapping("/products")
