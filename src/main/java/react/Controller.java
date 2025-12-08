@@ -1,13 +1,13 @@
 package react;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 import java.util.Map;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
-import java.util.List;
-
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 public class Controller {
     @GetMapping("/products")
