@@ -1,0 +1,23 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Set up JDK
+            uses: actions/setup-java@v4
+            with:
+              distribution: 'temurin'
+              java-version: '21'
+              cache: maven
+
+          - name: build and test
+            run: mvn clean verify
+
+          - name: format
+            run: mvn spotless:check
