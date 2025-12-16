@@ -15,6 +15,12 @@ jobs:
               distribution: 'temurin'
               java-version: '21'
 
+          - name: test
+            run: |
+              pwd
+              ls -la
+              find . -name pom.xml
+
           - name: build and test
             run: mvn clean verify
 
